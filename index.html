@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700&family=Roboto+Condensed:wght@100;200;300;400;500;600&family=Noto+Sans+JP:wght@300;400;500&family=Quicksand:wght@300;400;500;600;700&family=Montserrat:wght@500&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+<div class="wrapper" id="wrapper">
+    <div class="nav">
+        <div class="logo" style="cursor: pointer">
+            <h4>Patrik Pölkki</h4>
+        </div>
+        <div class="links">
+            <a href="#wrapper">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contacts">Contact</a>
+        </div>
+    </div>
+
+    <div class="about" id="about">
+        <div class="image">
+            <img src="minä.JPG" alt="me">
+        </div>
+        <div class="text">
+            <h1>About me</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum est metus, ultrices eu pretium eu,
+                blandit vel velit. Proin tincidunt ultrices neque in semper. Proin tincidunt accumsan venenatis.
+                Pellentesque sit amet tortor vitae metus tempor varius. Etiam ac ex dolor. Aliquam quis tellus ac diam
+                vestibulum imperdiet ac in nisl. Nulla sed quam sit amet metus vulputate varius at quis sem. Nulla vitae
+                felis nec ligula pellentesque elementum nec a magna. Nam eget imperdiet nunc. Praesent ac nibh a orci
+                accumsan sollicitudin. Sed facilisis magna sit amet rhoncus sagittis. Nullam vel hendrerit magna, in
+                rhoncus nisi. Aliquam sit amet felis et velit fringilla varius eget quis metus. Curabitur consectetur
+                eros sapien, nec aliquam magna gravida sed.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum est metus, ultrices eu pretium eu,
+                blandit vel velit. Proin tincidunt ultrices neque in semper. Proin tincidunt accumsan venenatis.
+                Pellentesque sit amet tortor vitae metus tempor varius. Etiam ac ex dolor. Aliquam quis tellus ac diam
+                vestibulum imperdiet ac in nisl. Nulla sed quam sit amet metus vulputate varius at quis sem. Nulla vitae
+                felis nec ligula pellentesque elementum nec a magna. Nam eget imperdiet nunc. Praesent ac nibh a orci
+                accumsan sollicitudin. Sed facilisis magna sit amet rhoncus sagittis. Nullam vel hendrerit magna, in
+                rhoncus nisi. Aliquam sit amet felis et velit fringilla varius eget quis metus. Curabitur consectetur
+                eros sapien, nec aliquam magna gravida sed.
+            </p>
+        </div>
+    </div>
+
+    <div class="projects" id="projects">
+        <h1>Projects</h1>
+        <div class="projectImg">
+            <div class="cardContainer" id="wildlife">
+                <img src="Sieppaa.PNG">
+                <div class="info">
+                    <h3>Wildlife Collection</h3>
+                    <p class="infoContent"></p>
+                </div>
+            </div>
+            <div class="cardContainer" id="languageQuiz">
+                <img src="app1.PNG">
+                <div class="info">
+                    <h3>Language Quiz</h3>
+                    <p class="infoContent2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum est
+                        metus, ultrices eu pretium eu,
+                        blandit vel velit. Proin tincidunt ultrices neque in semper. Proin tincidunt accumsan venenatis.
+                        Pellentesque sit amet tortor vitae metus tempor varius.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contacts" id="contacts">
+        <h1>Contact</h1>
+        <div class="links">
+            <ul>
+                <li><a href="https://github.com/PatrikPolkki"><i class="fab fa-github-square"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/patrik-p%C3%B6lkki-68466b1b6/"><i class="fab fa-linkedin"></i></a>
+                </li>
+                <li><a href="mailto:pate.polkki@gmail.com"><i class="fas fa-envelope"></i></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="sliderContainer">
+        <div class="slider">
+            <a class="arrowLeft"><i class="fas fa-chevron-left"></i></a>
+            <div id="imgHolder">
+                <img id="slide">
+                <a class="exit"><i class="fas fa-times"></i></a>
+            </div>
+            <a class="arrowRight"><i class="fas fa-chevron-right"></i></a>
+        </div>
+    </div>
+
+
+</div>
+
+<script>
+  'use strict';
+  let i = 0;
+  const images = [];
+
+  const arrowLeft = document.querySelector('.arrowLeft');
+  const arrowRight = document.querySelector('.arrowRight');
+  const slider = document.querySelector('.sliderContainer');
+  const img = document.getElementById('slide');
+
+  document.querySelector('#wildlife').addEventListener('click', (evt) => {
+    evt.preventDefault();
+    images[0] = 'Näyttökuva (66).png';
+    images[1] = 'Näyttökuva (67).png';
+    images[2] = 'Näyttökuva (59).png';
+    images[3] = 'Näyttökuva (60).png';
+    images[4] = 'Näyttökuva (61).png';
+    images[5] = 'Näyttökuva (62).png';
+    images[6] = 'Näyttökuva (63).png';
+    images[7] = 'Näyttökuva (64).png';
+    images[8] = 'Näyttökuva (65).png';
+
+    img.src = images[i];
+
+    document.getElementById('imgHolder').style.width = '80%';
+
+    slider.style.display = 'flex';
+
+  });
+  document.querySelector('#languageQuiz').addEventListener('click', (evt) => {
+    evt.preventDefault();
+    images[0] = 'Screenshot_20210126-225929.png';
+    images[1] = 'Screenshot_20210126-225941.png';
+    images[2] = 'Screenshot_20210126-225949.png';
+    images[3] = 'Screenshot_20210126-225956.png';
+    images[4] = 'Screenshot_20210126-230012.png';
+    images[5] = 'Screenshot_20210126-230018.png';
+    images[6] = 'Screenshot_20210126-230100.png';
+    images[7] = 'Screenshot_20210126-230116.png';
+    images[8] = 'Screenshot_20210126-230124.png';
+
+    document.getElementById('imgHolder').style.width = '300px';
+
+    img.src = images[i];
+
+    slider.style.display = 'flex';
+
+  });
+
+  const changeImgBack = () => {
+
+    if (i >= 1 && i <= images.length - 1) {
+      i--;
+
+    } else {
+      i = images.length - 1;
+
+    }
+    img.src = images[i];
+  };
+  const changeImgFront = () => {
+
+    if (i < images.length - 1) {
+      i++;
+
+    } else {
+      i = 0;
+    }
+
+    img.src = images[i];
+  };
+
+  arrowLeft.addEventListener('click', changeImgBack);
+  arrowRight.addEventListener('click', changeImgFront);
+
+  document.querySelector('.exit').addEventListener('click', (evt) => {
+    evt.preventDefault();
+    slider.style.display = 'none';
+  });
+
+
+</script>
+</body>
+</html>
