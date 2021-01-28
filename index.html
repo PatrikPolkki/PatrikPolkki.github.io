@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" content="width=device-width, initial-scale=1" name="viewport">
     <title>Title</title>
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700&family=Roboto+Condensed:wght@100;200;300;400;500;600&family=Noto+Sans+JP:wght@300;400;500&family=Quicksand:wght@300;400;500;600;700&family=Montserrat:wght@500&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600&family=Roboto+Condensed:wght@100;200;300;400;500;600&family=Noto+Sans+JP:wght@300;400;500&family=Quicksand:wght@300;400;500;600;700&family=Montserrat:wght@500&display=swap"
           rel="stylesheet">
 </head>
 <body>
 <div class="wrapper" id="wrapper">
     <div class="nav">
         <div class="logo" style="cursor: pointer">
-            <h4>Patrik Pölkki</h4>
+            <a href="#wrapper"><h4>Patrik Pölkki</h4></a>
         </div>
         <div class="links">
             <a href="#wrapper">About</a>
@@ -23,7 +23,7 @@
 
     <div class="about" id="about">
         <div class="image">
-            <img src="minä.JPG" alt="me">
+            <img src="images/minä.JPG" alt="me">
         </div>
         <div class="text">
             <h1>About me</h1>
@@ -54,20 +54,32 @@
         <h1>Projects</h1>
         <div class="projectImg">
             <div class="cardContainer" id="wildlife">
-                <img src="Sieppaa.PNG">
+                <img src="images/Sieppaa.PNG">
                 <div class="info">
                     <h3>Wildlife Collection</h3>
-                    <p class="infoContent"></p>
+                    <p class="infoContent">Wildlife Collection is a social media for people who like to spend time in
+                        nature and with animals.<br> With Wildlife Collection you can share your photos or videos and
+                        also
+                        the location where it was
+                        taken.<br> Wildlife Collection
+                        also allows you to like and comment others media.<br>
+                        If you do not want to register as a user, you can browse others media without liking or
+                        commenting feature.
+                    </p>
                 </div>
             </div>
             <div class="cardContainer" id="languageQuiz">
-                <img src="app1.PNG">
+                <img src="images/app1.PNG">
                 <div class="info">
                     <h3>Language Quiz</h3>
-                    <p class="infoContent2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum est
-                        metus, ultrices eu pretium eu,
-                        blandit vel velit. Proin tincidunt ultrices neque in semper. Proin tincidunt accumsan venenatis.
-                        Pellentesque sit amet tortor vitae metus tempor varius.</p>
+                    <p class="infoContent2">Language Quiz is an app that helps in memorizing Finnish words. In this
+                        case, Language Quiz contains only words about animals.<br>
+                        Language Quiz asks ten questions in random order each time. when the Quiz is finished, the app
+                        will show your score, which you can also share with others.<br>
+                        Language Quiz also keeps a track of answers and corrects answers in the database, which you can
+                        see in the result section.
+
+                    </p>
                 </div>
             </div>
         </div>
@@ -88,8 +100,12 @@
     <div class="sliderContainer">
         <div class="slider">
             <a class="arrowLeft"><i class="fas fa-chevron-left"></i></a>
-            <div id="imgHolder">
-                <img id="slide">
+            <div id="imgHolder" class="imgHolder">
+                <img id="slide" class="slide">
+                <a class="exit"><i class="fas fa-times"></i></a>
+            </div>
+            <div id="imgHolder2" class="imgHolder">
+                <img id="slide1" class="slide">
                 <a class="exit"><i class="fas fa-times"></i></a>
             </div>
             <a class="arrowRight"><i class="fas fa-chevron-right"></i></a>
@@ -99,87 +115,6 @@
 
 </div>
 
-<script>
-  'use strict';
-  let i = 0;
-  const images = [];
-
-  const arrowLeft = document.querySelector('.arrowLeft');
-  const arrowRight = document.querySelector('.arrowRight');
-  const slider = document.querySelector('.sliderContainer');
-  const img = document.getElementById('slide');
-
-  document.querySelector('#wildlife').addEventListener('click', (evt) => {
-    evt.preventDefault();
-    images[0] = 'Näyttökuva (66).png';
-    images[1] = 'Näyttökuva (67).png';
-    images[2] = 'Näyttökuva (59).png';
-    images[3] = 'Näyttökuva (60).png';
-    images[4] = 'Näyttökuva (61).png';
-    images[5] = 'Näyttökuva (62).png';
-    images[6] = 'Näyttökuva (63).png';
-    images[7] = 'Näyttökuva (64).png';
-    images[8] = 'Näyttökuva (65).png';
-
-    img.src = images[i];
-
-    document.getElementById('imgHolder').style.width = '80%';
-
-    slider.style.display = 'flex';
-
-  });
-  document.querySelector('#languageQuiz').addEventListener('click', (evt) => {
-    evt.preventDefault();
-    images[0] = 'Screenshot_20210126-225929.png';
-    images[1] = 'Screenshot_20210126-225941.png';
-    images[2] = 'Screenshot_20210126-225949.png';
-    images[3] = 'Screenshot_20210126-225956.png';
-    images[4] = 'Screenshot_20210126-230012.png';
-    images[5] = 'Screenshot_20210126-230018.png';
-    images[6] = 'Screenshot_20210126-230100.png';
-    images[7] = 'Screenshot_20210126-230116.png';
-    images[8] = 'Screenshot_20210126-230124.png';
-
-    document.getElementById('imgHolder').style.width = '300px';
-
-    img.src = images[i];
-
-    slider.style.display = 'flex';
-
-  });
-
-  const changeImgBack = () => {
-
-    if (i >= 1 && i <= images.length - 1) {
-      i--;
-
-    } else {
-      i = images.length - 1;
-
-    }
-    img.src = images[i];
-  };
-  const changeImgFront = () => {
-
-    if (i < images.length - 1) {
-      i++;
-
-    } else {
-      i = 0;
-    }
-
-    img.src = images[i];
-  };
-
-  arrowLeft.addEventListener('click', changeImgBack);
-  arrowRight.addEventListener('click', changeImgFront);
-
-  document.querySelector('.exit').addEventListener('click', (evt) => {
-    evt.preventDefault();
-    slider.style.display = 'none';
-  });
-
-
-</script>
+<script src="index.js"></script>
 </body>
 </html>
