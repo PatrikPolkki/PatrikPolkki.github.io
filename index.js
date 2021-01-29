@@ -18,6 +18,8 @@ document.querySelector('#wildlife').addEventListener('click', (evt) => {
   images[6] = 'images/Näyttökuva (63).png';
   images[7] = 'images/Näyttökuva (64).png';
   images[8] = 'images/Näyttökuva (65).png';
+  images[9] = 'images/Näyttökuva (68).png';
+  images[10] = 'images/Näyttökuva (69).png';
 
   img.src = images[i];
 
