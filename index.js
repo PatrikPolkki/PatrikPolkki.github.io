@@ -1,6 +1,6 @@
 'use strict';
 let i = 0;
-const images = [];
+let images = [];
 
 const arrowLeft = document.querySelector('.arrowLeft');
 const arrowRight = document.querySelector('.arrowRight');
@@ -80,4 +80,6 @@ document.querySelector('.exit').addEventListener('click', (evt) => {
   evt.preventDefault();
   slider.style.display = 'none';
   document.querySelector('body').style.overflow = 'auto';
+
+  images = [];
 });
