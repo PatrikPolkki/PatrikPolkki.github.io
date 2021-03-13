@@ -41,7 +41,35 @@ document.querySelector('#languageQuiz').addEventListener('click', (evt) => {
   images[7] = 'images/Screenshot_20210126-230116.png';
   images[8] = 'images/Screenshot_20210126-230124.png';
 
-  document.getElementById('imgHolder').setAttribute('style', 'width: 300px !important');
+  document.getElementById('imgHolder').
+      setAttribute('style', 'width: 300px !important');
+
+  img.src = images[i];
+
+  slider.style.display = 'flex';
+  document.querySelector('body').style.overflow = 'hidden';
+
+});
+
+document.querySelector('#officium').addEventListener('click', (evt) => {
+  evt.preventDefault();
+
+  images[0] = 'images/IMG_1286.PNG';
+  images[1] = 'images/IMG_1276.PNG';
+  images[2] = 'images/IMG_1283.PNG';
+  images[3] = 'images/IMG_1277.PNG';
+  images[4] = 'images/IMG_1278.PNG';
+  images[5] = 'images/IMG_1279.PNG';
+  images[6] = 'images/IMG_1284.PNG';
+  images[7] = 'images/IMG_1285.PNG';
+  images[8] = 'images/IMG_1280.PNG';
+  images[9] = 'images/IMG_1282.PNG';
+  images[10] = 'images/IMG_1281.PNG';
+
+
+
+  document.getElementById('imgHolder').
+      setAttribute('style', 'width: 257px !important');
 
   img.src = images[i];
 

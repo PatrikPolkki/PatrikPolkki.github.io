@@ -175,7 +175,7 @@ body {
     padding: 20px 0;
 }
 
-.infoContent, .infoContent2 {
+.infoContent, .infoContent2, .infoContent3 {
     display: none;
     color: white;
     padding: 0 20px;
@@ -190,6 +190,10 @@ body {
 }
 
 #languageQuiz:hover .infoContent2 {
+    display: flex;
+}
+
+#officium:hover .infoContent3 {
     display: flex;
 }
 
