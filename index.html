@@ -351,7 +351,24 @@
             class="far fa-copyright"></span> 2021 All rights reserved.</span>
 </footer>
 
+<script src="script.js"></script>
 
-<script type="module" src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+<script>
+  const config = {
+    type: 'carousel',
+    perView: 3,
+    breakpoints: {
+      550: {
+        perView: 1,
+      },
+      950: {
+        perView: 2,
+      },
+    },
+    hoverpause: true,
+  };
+  new Glide('.glide', config).mount();
+</script>
 </body>
 </html>

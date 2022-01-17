@@ -1,7 +1,5 @@
 "use strict";
 
-import Glide from "@glidejs/glide";
-
 document.addEventListener("scroll", (evt) => {
   evt.preventDefault();
   if (window.scrollY > 20) {
@@ -33,18 +31,3 @@ document.querySelector(".menu").addEventListener("click", (evt) => {
     document.querySelector(".menu-btn i").classList.toggle("active");
   }
 });
-
-const config = {
-  type: "carousel",
-  perView: 3,
-  breakpoints: {
-    550: {
-      perView: 1,
-    },
-    950: {
-      perView: 2,
-    },
-  },
-  hoverpause: true,
-};
-new Glide(".glide", config).mount();
