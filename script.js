@@ -1,5 +1,7 @@
 "use strict";
 
+import Glide from "@glidejs/glide";
+
 document.addEventListener("scroll", (evt) => {
   evt.preventDefault();
   if (window.scrollY > 20) {

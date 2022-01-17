@@ -4,11 +4,12 @@
   "description": "",
   "main": "script.js",
   "dependencies": {
-    "@glidejs/glide": "^3.5.2",
+    "@glidejs/glide": "^3.5.2"
+  },
+  "devDependencies": {
     "eslint": "^8.6.0",
     "prettier": "^2.5.1"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
